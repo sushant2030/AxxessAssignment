@@ -12,6 +12,7 @@ import Kingfisher
 import Reachability
 class HomeVC: UIViewController {
     
+    
     lazy var homeCollectionView : UICollectionView = {
         let layout = CustomLayout()
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -24,6 +25,15 @@ class HomeVC: UIViewController {
     var isLoaded = false
     
     override func viewDidLoad() {
+        
+        /*It is Observed that everytime the api was getting hit for the image, a different image used to
+         get load so I had to clean the cache on each launch when the network is Reachable else offline
+         content can be seen.
+         Another thing is we were not getting the Image sizes initially so I have downloaded all the images
+         before I could show the content.
+         However, in offline mode, application will be launched quickly.
+         */
+        
         super.viewDidLoad()
         view.addSubview(homeCollectionView)
         view.backgroundColor = .white
@@ -90,7 +100,6 @@ class HomeVC: UIViewController {
                 }
             }
         }
-        
     }
     
     override func updateViewConstraints() {
