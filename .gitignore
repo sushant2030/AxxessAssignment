@@ -1,0 +1,7 @@
+Pods/
+Podfile.lock
+AxxessAssignment.xcworkspace/
+.DS_Store
+*.xcuserdata
+build/
+docs/
