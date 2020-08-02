@@ -33,6 +33,7 @@ class ImageVC: UIViewController {
                 fullScreenImageView.contentMode = .center
             }
         }
+        self.navigationItem.title = "Image For Pleasure!!!"
     }
     
     

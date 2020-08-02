@@ -34,6 +34,7 @@ class TextVC: UIViewController {
         if Helper.isDeviceIPad() {
             textView.font = UIFont.systemFont(ofSize: 20)
         }
+        self.navigationItem.title = "Read For Pleasure!!!"
     }
     
     

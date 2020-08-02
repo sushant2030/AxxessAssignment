@@ -31,6 +31,7 @@ class HomeVC: UIViewController {
             layout.delegate = self
         }
         checkReachability()
+        self.navigationItem.title = "Home"
     }
     
     func proceed()  {
